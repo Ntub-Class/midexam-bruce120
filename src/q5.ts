@@ -5,7 +5,13 @@
 // 輸出說明: 請直接console.log出是否合法
 
 let checkId = function (id: string) {
-
+    let n = id.split('');
+    let ans = +n[0] * 10 + +n[1] * 9 + +n[2] * 8
+    if (ans % 5 === 0) {
+        console.log("合法");
+    } else {
+        console.log("不合法");
+    }
 }
 
 checkId('425') // 不合法
