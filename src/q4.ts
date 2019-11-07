@@ -4,10 +4,19 @@
 // 輸出說明: 請直接console.log出答案
 // 提示: String.includes, String.split
 
-
 let calc = function (calcString: string) {
-
+    if (calcString.includes("*") === true) {
+        console.log(+calcString.charAt(0) * +calcString.charAt(2)); 
+    } else if(calcString.includes("+") === true){
+        console.log(+calcString.charAt(0) + +calcString.charAt(2));
+    } else if(calcString.includes("/") === true){
+        console.log(+calcString.charAt(0) / +calcString.charAt(2));
+    } else{
+        console.log(+calcString.charAt(0) - +calcString.charAt(2));
+    }
 }
+
+
 
 calc('8*2')
 calc('1+1')
